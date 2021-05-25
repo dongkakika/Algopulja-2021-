@@ -9,7 +9,7 @@ int max_cnt = 0; // 최대로 깬 퀘스트 수
 
 void find_set(int current_depth, int next_start){
 	
-	// key_set이 만들어졌다면 몇 개의 스킬을 사용하는지 검사 & 최댓값 갱신  
+	// skill_set이 만들어졌다면 몇 개의 스킬을 사용하는지 검사 & 최댓값 갱신  
 	if(current_depth >= n){
 		int cnt=0;
 		for(int i=0; i<m; i++){
@@ -25,7 +25,7 @@ void find_set(int current_depth, int next_start){
 		return;
 	}
 	
-	// key_set이 만들어지지 않았다면, 생성  
+	// skill_set이 만들어지지 않았다면, 생성  
 	// 1번 키부터 시작  
 	for(int i = next_start+1; i <= n * 2; i++){
 		skill_set[i] = true;
